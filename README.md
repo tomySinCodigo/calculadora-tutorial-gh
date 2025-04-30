@@ -64,5 +64,6 @@ dividir(a, b)
 
 toma dos numeros y retorna la division
 
-> [!IMPORTANT] Division por cero
-> en caso de que el parametro `b` sea cero, la funcion retorna `None` y muestra un `print` con mensaje de error
+> [!IMPORTANT]  
+> **Division por cero**  
+> En caso de que el parametro `b` sea cero, la funcion retorna `None` y muestra un `print` con mensaje de error.
