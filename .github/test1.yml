@@ -1,0 +1,19 @@
+name: creando archivo saludo
+on: [push]
+
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: hola mundo
+      run: echo "Hola Mundo"
+
+    - name: touch file
+      run: touch saludo.txt
+
+    - name: set text
+      run: echo "Hola Mundo" >> saludo.txt
+
+    - name: read file
+      run: cat saludo.txt
