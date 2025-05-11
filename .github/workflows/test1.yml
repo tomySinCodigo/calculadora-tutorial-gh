@@ -8,12 +8,18 @@ jobs:
     steps:
     - name: hola mundo
       run: echo "Hola Mundo"
+    
+    - name: create results directory
+      run: mkdir results
 
     - name: touch file
-      run: touch saludo.txt
+      run: touch results/saludo.txt
 
     - name: set text
-      run: echo "Hola Mundo" >> saludo.txt
+      run: echo "Hola Mundo" >> results/saludo.txt
 
-    - name: read file
-      run: cat saludo.txt
+    - name: upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-file-upload
+        path: results/saludo.txt
