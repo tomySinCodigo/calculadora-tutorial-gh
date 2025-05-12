@@ -1,4 +1,4 @@
-name: "ejemplo de usando una variable directamente"
+name: "ejemplo de usando una variable de repositorio"
 
 on: [workflow_dispatch]
 
@@ -10,5 +10,5 @@ jobs:
       My_VAR: mi variable de entorno
 
     steps:
-    - name: test variable
-      run: echo "el valor de $My_VAR"
+    - name: test variable de repo
+      run: echo "el valor es ${{ vars.REPO_MI_VAR_1 }}"
