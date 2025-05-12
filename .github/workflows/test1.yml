@@ -1,15 +1,14 @@
-name: test composite action
+name: "ejemplo de usando una variable directamente"
+
 on: [workflow_dispatch]
 
 jobs:
-  my-local-action:
+  say-hello:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: checkOUt code
-      uses: actions/checkout@v3
+    env:
+      My_VAR: mi variable de entorno
 
-    - name: usando saludar-a
-      uses: ./.github/actions/saludar-nombre
-      with:
-        saludar-a: Tomi
+    steps:
+    - name: test variable
+      run: echo "el valor de $My_VAR"
