@@ -1,25 +1,13 @@
-name: creando archivo saludo
+name: test composite action
 on: [workflow_dispatch]
 
 jobs:
-  saludo:
+  my-local-action:
     runs-on: ubuntu-latest
 
     steps:
-    - name: hola mundo
-      run: echo "Hola Mundo"
-    
-    - name: create results directory
-      run: mkdir results
+    - name: checkOUt CODE
+      uses: actions/checkout@v3
 
-    - name: touch file
-      run: touch results/saludo.txt
-
-    - name: set text
-      run: echo "Hola Mundo" >> results/saludo.txt
-
-    - name: upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: test-file-upload
-        path: results/saludo.txt
+    - name: ls
+      uses: ./.github/actions/saludar-nombre
