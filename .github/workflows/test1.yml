@@ -6,8 +6,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: checkOUt CODE
+    - name: checkOUt code
       uses: actions/checkout@v3
 
-    - name: ls
+    - name: usando saludar-a
       uses: ./.github/actions/saludar-nombre
+      with:
+        saludar-a: Tomi
