@@ -1,4 +1,4 @@
-name: "ejemplo de usando una variable de repositorio"
+name: "usando una variable de repositorio y secreta"
 
 on: [workflow_dispatch]
 
@@ -12,3 +12,6 @@ jobs:
     steps:
     - name: test variable de repo
       run: echo "el valor es ${{ vars.REPO_MI_VAR_1 }}"
+
+    - name: variable secreta"
+      run: echo "valor secreto ${{ secrets.MI_SECRET_VAR1 }}"
