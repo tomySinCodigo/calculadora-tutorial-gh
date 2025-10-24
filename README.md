@@ -67,3 +67,6 @@ toma dos numeros y retorna la division
 > [!IMPORTANT]  
 > **Division por cero**  
 > En caso de que el parametro `b` sea cero, la funcion retorna `None` y muestra un `print` con mensaje de error.
+
+
+agregue una linea, para hacer una prueba
